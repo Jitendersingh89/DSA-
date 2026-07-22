@@ -35,13 +35,17 @@ public:
         int x = neg.size();
         int y = pos.size();
         vector<int> res(x+y);
-        for(int i=0;i<x;i++)
-        neg[i] = neg[i]*neg[i];
+        for(int i=0;i<x;i++){
+            neg[i] = neg[i]*neg[i];
+        }
+        ;
 
         reverse(neg.begin(), neg.end());
 
-        for(int i = 0;i<y;i++)
-        pos[i] = pos[i] * pos[i];
+        for(int i = 0;i<y;i++){
+             pos[i] = pos[i] * pos[i];
+        }
+       
         while(i<x && j<y){
             if(neg[i]<=pos[j]){
                 res[id] = neg[i];
